@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.application.controllers.DashboardViewController">
+   <children>
+       <fx:include source="menuBar.fxml" />
+       <AnchorPane prefHeight="635.0" prefWidth="1000.0">
+         <children>
+            <Label layoutX="434.0" layoutY="14.0" text="Dashboard">
+               <font>
+                  <Font name="Agency FB Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="104.0" text="Number of Members:" />
+            <Label fx:id="noMembers" layoutX="199.0" layoutY="104.0" text="members" />
+            <Label layoutX="350.0" layoutY="104.0" text="Number of Trainers:" />
+            <Label fx:id="noTrainers" layoutX="480.0" layoutY="104.0" text="trainers" />
+            <Label layoutX="643.0" layoutY="104.0" text="Current revenue:" />
+            <Label fx:id="revenue" layoutX="743.0" layoutY="104.0" text="revenue" />
+            <AreaChart fx:id="chart" layoutX="64.0" layoutY="148.0" prefHeight="400.0" prefWidth="859.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </AreaChart>
+         </children></AnchorPane>
+   </children>
+</VBox>

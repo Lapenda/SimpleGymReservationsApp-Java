@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="1000.0" prefHeight="29.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.application.controllers.MenuBarController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <MenuBar minWidth="1000.0" prefHeight="4.0" prefWidth="1000.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Home">
+            <items>
+                  <MenuItem fx:id="profileMenuItem" mnemonicParsing="false" onAction="#goToProfile" text="Profile" />
+                  <MenuItem fx:id="dashboardMenuItem" mnemonicParsing="false" onAction="#goToDashboard" text="Dashboard" />
+              <MenuItem mnemonicParsing="false" onAction="#signOutClick" text="Sign out" />
+            </items>
+          </Menu>
+          <Menu fx:id="staffMenu" mnemonicParsing="false" text="Staff">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goToTrainerInfo" text="Trainers" />
+                  <MenuItem mnemonicParsing="false" onAction="#goToCustomerInfo" text="Customers" />
+               </items>
+          </Menu>
+            <Menu fx:id="aboutYouMenu" mnemonicParsing="false" text="About you">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#goToResSession" text="Reserve a Session" />
+                  <MenuItem mnemonicParsing="false" onAction="#goPay" text="Pay" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="History">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#showChanges" text="Changes" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="currentUser" GridPane.halignment="RIGHT">
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin>
+      </Label>
+   </children>
+</GridPane>

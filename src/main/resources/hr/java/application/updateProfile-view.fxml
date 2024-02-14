@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.application.controllers.UpdateProfileController">
+    <children>
+        <fx:include source="menuBar.fxml" />
+        <AnchorPane prefHeight="605.0" prefWidth="1000.0">
+            <children>
+                <Label layoutX="374.0" layoutY="121.0" text="Customer ID:" />
+                <Label layoutX="405.0" layoutY="196.0" text="Name:" />
+                <Label layoutX="400.0" layoutY="273.0" text="Address:" />
+                <Label layoutX="407.0" layoutY="416.0" text="Gender:" />
+                <Label layoutX="367.0" layoutY="341.0" text="Phone Number:" />
+                <TextField fx:id="customerIDTextField" disable="true" editable="false" layoutX="456.0" layoutY="117.0" />
+                <TextField fx:id="customerNameTextField" layoutX="456.0" layoutY="192.0" />
+                <TextField fx:id="customerAddressTextField" layoutX="457.0" layoutY="269.0" />
+                <TextField fx:id="customerPhoneNumTextField" layoutX="460.0" layoutY="337.0" />
+                <ComboBox fx:id="customerGenderComboBox" layoutX="458.0" layoutY="412.0" prefWidth="150.0" />
+                <Button layoutX="400.0" layoutY="487.0" mnemonicParsing="false" onAction="#update" prefHeight="72.0" prefWidth="115.0" text="Update" />
+                <Label layoutX="315.0" layoutY="14.0" text="Update Personal Information">
+                    <font>
+                        <Font name="Agency FB Bold" size="36.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
